@@ -1,0 +1,16 @@
+{
+  "name": "ywca-workspace",
+  "version": "0.0.1",
+  "description": "YWCA Workspace for Rafael Martinez-Salas",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:rafamsalas/ywebca.git"
+  },
+  "author": {
+    "name": "Rafael Martinez-Salas",
+    "email": "martinezsalasrafael@gmail.com",
+    "url": "https://github.com/rafamsalas"
+  },
+  "license": "MIT",
+  "dependencies": {}
+}
