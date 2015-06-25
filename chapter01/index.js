@@ -159,8 +159,8 @@ Exercises.strings4 = function () {
   var answer;
 
   // Uncomment the following line and type your answer:
-  answer = 'If a String is in single quotes, like this,\nyou can nest \"double qoutes\".\nbut don\'t forget to escape your \\backslashes\\\nso you can type \"\\n\"';
-
+  answer = "'If a string is in single quotes, like this,\nyou can nest \"double quotes\".\nBut don\\\'t forget to escape your \\backslashes\\\nso you can type \"\\n\"!'";
+  //answer = 'If a string is in single quotes, like this,\nyou can nest "double quotes".\nBut don\'t forget to escape your \\backslashes\\\nso you can type "\n"!'
   // Then check the console in spec.html to debug.
   
   console.log( "Strings 4:\n" + answer );
