@@ -287,10 +287,10 @@ console.log(foo);
   // Save the result in a new variable called `ding`.
 var ding = bar + foo + bar;
   // Call `strReverse` and pass it `ding` (as an argument).
-var results = strReverse(ding);
+ding = strReverse(ding);
   // Send the result to the user in a confirm window.
   // Save the user's response in a new variable called `quux`.
-var quux = confirm(results);
+var quux = confirm(ding);
   // Return the opposite of `quux`.
 return !quux;
 };
@@ -303,9 +303,9 @@ Exer.condition1 = function ( isSerious ) {
 
   console.log( "Welcome to Camelot!" );
 
-  if (isSerious == false)
+  if (isSerious == false){
   console.log("On second thoughts, let's not go to Camelot. It is a silly place.");
-
+}
 };
 
 // Conditional 2
@@ -341,24 +341,30 @@ Exer.condition3 = function ( whatDay ) {
   }
 
   // If `whatDay` is "Mannersday"...
-  else if (whatDay == "Mannersday"){
+  if (whatDay == "Mannersday"){
     luckyNumber += 4;
   }
 
   // If `whatDay` is "Foosday"...
-
+  if(whatDay == "Foosday"){
+    luckyNumber += 2;
+  }
   // If `whatDay` is "Heyday"...
-  else if (whatDay == "Heyday"){
+  if (whatDay == "Heyday"){
     luckyNumber += luckyNumber.charAt(0);
   }
   // Otherwise...
+  if (whatDay != "Mannersday" && whatDay != "Foosday" && whatDay != "Heyday") {
+    luckyNumber = Infinity;
+  }
   // Return `luckyNumber`
+return luckyNumber;
 */
   
   if (whatDay.length <= 6) {
   luckyNumber += "!";
     if (whatDay == "Heyday") {
-      luckyNumber +=luckyNumber.charAt(0);
+      luckyNumber += luckyNumber.charAt(0);
       }else{
     luckyNumber = Infinity;
   }
@@ -443,6 +449,7 @@ Exer.doWhile1 = function () {
 // doWhile 2
 // Recreate the code in the function without a loop
 Exer.doWhile2 = function () {
+  
 console.log("Train# 1: In flight!?");
 console.log("Train# 2: In flight!?");
 console.log("Train# 3: In flight!?");
@@ -450,6 +457,7 @@ console.log("Train# 4: In flight!?");
 console.log("Train# 5: In flight!?");
 console.log("Train# 6: In flight!?");
 console.log("Train# 7: In flight!?");
+
 };
 /* jshint ignore:end */
 
@@ -481,7 +489,6 @@ Exer.indenting2 = function() {
 // Rewrite the loop as a linear sequence of statements.
 Exer.for1 = function () {
 
-  var scream;
 console.log("...");
 console.log("    ...AA");
 console.log("        ...AAAA");
@@ -658,11 +665,14 @@ Exer.comments1 = function ( war, missiles, wood, sheep, brick ) {
 
 Exer.comments2 = function () {
 /* 
-            _ _       
-  /\  /\___| | | ___  
- / /_/ / _ \ | |/ _ \ 
-/ __  /  __/ | | (_) |
-\/ /_/ \___|_|_|\___/ 
-
+                   _______  ______   _______  _______ 
+|\     /||\     /|(  ____ \(  ___ \ (  ____ \(  ___  )
+( \   / )| )   ( || (    \/| (   ) )| (    \/| (   ) |
+ \ (_) / | | _ | || (__    | (__/ / | |      | (___) |
+  \   /  | |( )| ||  __)   |  __ (  | |      |  ___  |
+   ) (   | || || || (      | (  \ \ | |      | (   ) |
+   | |   | () () || (____/\| )___) )| (____/\| )   ( |
+   \_/   (_______)(_______/|/ \___/ (_______/|/     \|
+                                                      
 */
 };
