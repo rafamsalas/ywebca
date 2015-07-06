@@ -303,7 +303,7 @@ Exer.condition1 = function ( isSerious ) {
 
   console.log( "Welcome to Camelot!" );
 
-  if (isSerious == false){
+  if (!isSerious){
   console.log("On second thoughts, let's not go to Camelot. It is a silly place.");
 }
 };
@@ -334,8 +334,7 @@ Exer.condition3 = function ( whatDay ) {
 
   // Declare and initialize `luckyNumber`
   var luckyNumber = 7;
-  // If the length of `whatDay` is 6 or less...
-  /*
+
   if (whatDay.length <= 6){
     luckyNumber += "!";
   }
@@ -346,40 +345,24 @@ Exer.condition3 = function ( whatDay ) {
   }
 
   // If `whatDay` is "Foosday"...
-  if(whatDay == "Foosday"){
+  else if(whatDay == "Foosday"){
     luckyNumber += 2;
   }
+
   // If `whatDay` is "Heyday"...
-  if (whatDay == "Heyday"){
+  else if (whatDay == "Heyday"){
     luckyNumber += luckyNumber.charAt(0);
   }
+
   // Otherwise...
-  if (whatDay != "Mannersday" && whatDay != "Foosday" && whatDay != "Heyday") {
+  else {
     luckyNumber = Infinity;
   }
   // Return `luckyNumber`
 return luckyNumber;
-*/
-  
-  if (whatDay.length <= 6) {
-  luckyNumber += "!";
-    if (whatDay == "Heyday") {
-      luckyNumber += luckyNumber.charAt(0);
-      }else{
-    luckyNumber = Infinity;
-  }
-}
-  else if (whatDay == "Mannersday"){
-    luckyNumber += 4;
-  }
-  else if (whatDay == "Foosday") {
-    luckyNumber += 2;
-  }
-  else{
-    luckyNumber = Infinity;
-  }
-  return luckyNumber;
+
 };
+
 
 // Conditional 4
 Exer.condition4 = function () {
