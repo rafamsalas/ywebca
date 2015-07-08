@@ -319,7 +319,7 @@ Exer.condition2 = function ( temperature ) {
   //     Hermit crab warning!
     console.log("Hermit crab warning!");
   // Otherwise, output
-} else{
+} else {
   //     Catch of the day: influenza, $14/lb.
   console.log("Catch of the day: influenza, $14/lb.");
 }
@@ -386,7 +386,7 @@ Exer.condition4 = function () {
     console.log("I sure hope it isn't February.");
   }
     // Otherwise...
-  else{
+  else {
 console.log("Did you know? There are exactly " + date + " ways to make today awesome!");
   }
 };
@@ -399,7 +399,7 @@ Exer.while1 = function () {
 
   var num = 10;
   while(num >0){
-console.log(num + " sheep");
+    console.log(num + " sheep");
     num--;
   }
 };
@@ -504,7 +504,7 @@ for(var i = 20; i >= 5; i--){
   if(i % 2 == 0){
     console.log(i, "even");
   }
-  else{
+  else {
     console.log(i, "odd");
   }
 }
@@ -630,16 +630,19 @@ Exer.comments1 = function ( war, missiles, wood, sheep, brick ) {
   if ( war ) {
     if ( missiles ) {
       //missiles.launch();
-    } else {
+    }
+    else {
       cower();
     }
-  } else {
+  }
+  else {
     if ( wood ) {
       wood.trade( sheep, 1 );
       //something involving wheat.
     } else if ( sheep ) {
       sheep.trade( wood, 3 );
-    } else {
+    }
+    else {
       brick.buy(2);//something something bandits!
     }
   }
