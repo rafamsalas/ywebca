@@ -13,7 +13,7 @@ else{
       if ((j + i) % 2 == 0){
         cb += " ";
        }
-      else{
+       else{
         cb += "#";
        }
     }
