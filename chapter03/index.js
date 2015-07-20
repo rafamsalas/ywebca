@@ -291,7 +291,6 @@ Exer.values1 = function ( volume, spaceCubeDetector ) {  //
 //=======================================================//
 var volume = spaceCubeDetector;
 volume(1, 1, 1);
-//spaceCubeDetector(volume(1,1,1));
 return volume;
 };  // end Exer.values1
 
@@ -404,14 +403,16 @@ return jack;
 // Create a function that takes two parameters and return it.
 //=================================//
 Exer.optional1 = function() {
-
+function Optional(option1, option2){
+  return Optional;
+}
 };
 
 /*******************************    Optional 2    *******************************/
 // Call the function value we pass back to you with 4 arguments.
 //=================================//
 Exer.optional2 = function(exercise) {
-
+  Optional(This, is, an, exercise1);
 };
 
 /*******************************************************************************
@@ -419,14 +420,39 @@ Exer.optional2 = function(exercise) {
 *******************************************************************************/
 
 /*******************************    Closures 1    *******************************/
-// 1.) Create a new version of `spaceCubeDetector` that takes a length and a width.
-// 2.) Make `spaceCubeDetector` return another function.
+// 1.) Create a new version of `spaceCubeDetector` that takes a length and a width. DONE
+// 2.) Make `spaceCubeDetector` return another function. DONE
 // 3.) The function spaceCubeDetector returns should take a height
 // 4.) and return the string "SPACE CUBE DETECTED!!" when length, width, and
 // height are the same and the string "THIS IS NO SPACE CUBE!" when they are not.
-// 5.) Return the new spaceCubeDetector.
+// 5.) Return the new spaceCubeDetector. DONE
 //=================================//
 Exer.closures1 = function(spaceCubeDetector) {
+  /*function SpaceCubeDetector(length, width){// #1
+    return function (height){// #2 and #3
+      if (height == length && height == width){// #4
+        return "SPACE CUBE DETECTED!!";
+      }
+      else{
+        return "THIS IS NO SPACE CUBE!";
+      }
+    }
+  }
+return SpaceCubeDetector(length, width)(height);// #5
+*/
+
+  var SpaceCubeDetector = function (length, width){
+    return function(height){
+      if (height == length && height == width){// #4
+        return "SPACE CUBE DETECTED!!";
+      }
+      else{
+        return "THIS IS NO SPACE CUBE!";
+      }
+    }
+  }
+
+
 
 };
 
@@ -450,6 +476,7 @@ Exer.closures1 = function(spaceCubeDetector) {
 //
 //=================================//
 Exer.recursion1 = function(code, puzzleBox) {
+  //function contraBeater (code, controller){}
 };
 
 /*******************************    Recursion 2   *******************************/
@@ -530,6 +557,8 @@ Exer.sideEffectExample = function() {
 
 Exer.sideEffect1 = function() {
   getBarkNoise();
+  pairsOfLegsToTotalLegs(2);
+  hasTail();
 };
 
 /*******************************    Side Effects 2  *******************************/
@@ -537,4 +566,6 @@ Exer.sideEffect1 = function() {
 //=================================//
 
 Exer.sideEffect2 = function() {
+  setBarkNoise('woof');
+  bark('bark', 5);
 };
