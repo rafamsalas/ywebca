@@ -39,9 +39,9 @@ var myLog = function (message) {
 Exer.defining3 = function () {  //
 //==============================//
 
-var square = function (number) {
-  console.log(number*number);
-  return number*number;
+var square = function (number) {//creates a function named square and with a parameter named number
+  console.log(number*number);//logs the number squared
+  return number*number;//returns the squared number
 }
 
 };  // end Exer.defining3 // end Exer.defining3
@@ -59,15 +59,15 @@ var square = function (number) {
 //===============================//
 Exer.parameters1 = function() {  //
 //===============================//
-var spaceCubeDetector = function (length, width, height) {
-    if (length == width && length == height) {
-      return "SPACE CUBE DETECTED!!";
+var spaceCubeDetector = function (length, width, height) {//creates a function named spaceCubeDetector w/ parameters of length, width, height
+    if (length == width && length == height) {//checks if the length, width, and height are the same
+      return "SPACE CUBE DETECTED!!";// returns this message if they are the same
     }
-    else {
-      return "THIS IS NO SPACE CUBE!";
+    else {//if they are not the same,
+      return "THIS IS NO SPACE CUBE!";//the function returns this message instead
     }
   }
-  return spaceCubeDetector;
+  return spaceCubeDetector;// returns spaceCubeDetector to the user
  };  // end Exer.parameters1
 
 /*****************************    Parameters 2    *****************************/
@@ -81,12 +81,12 @@ var spaceCubeDetector = function (length, width, height) {
 //================================================//
 Exer.parameters2 = function (spaceCubeDetector) {  //
 //================================================//
-spaceCubeDetector(3, 5, 3.14159265359);
-spaceCubeDetector(7, 7, 7);
-spaceCubeDetector(1, 2, 3);
-console.log("THIS IS NO SPACE CUBE!");
-console.log("SPACE CUBE DETECTED!!");
-console.log("THIS IS NO SPACE CUBE!");
+spaceCubeDetector(3, 5, 3.14159265359);// first test
+spaceCubeDetector(7, 7, 7);//second test
+spaceCubeDetector(1, 2, 3);// third test
+console.log("THIS IS NO SPACE CUBE!");//result of the first test
+console.log("SPACE CUBE DETECTED!!");//result of the second test
+console.log("THIS IS NO SPACE CUBE!");//result of the third test
 
 };  // Exer.parameters2
 
@@ -128,23 +128,23 @@ Exer.scopeExample = function() {
 //  Write your answers in this section
 
 Exer.scope1 = function() {
-  return 5;
+  return 5;//foo is equal to 5
 };
 
 Exer.scope2 = function() {
-  return 35;
+  return 35;//foo is being multiplied by 7, so it's 35
 };
 
 Exer.scope3 = function() {
-  return 7;
+  return 7;//returns 7 since foo was re-assigned to be equal to the result of the `skip` function, which returned 7
 };
 
 Exer.scope4 = function() {
-  return 7;
+  return 7;//is seven since scoop returned foo after scope 3
 };
 
 Exer.scope5 = function() {
-  return 35;
+  return 35;//quux was re-assigned to be equal to 35
 };
 
 /*******************************************************************************
@@ -224,58 +224,58 @@ Exer.nestExample = function() {
 //  Write your answers in this section.
 //2, 5, 7, 11, 7, 11, 7, 17, 17, 17, 13, 13, 0, 0, 0, 2, 5, 0,
 Exer.nest1 = function() {
-  return 2 ;
+  return 2 ;//returns foo, which is equal to 2
 };
 Exer.nest2 = function() {
-  return 5 ;
+  return 5 ;//returns bar, which is equal to 5
 };
 Exer.nest3 = function() {
-  return 7 ;
+  return 7 ;// returns quux, which is equal to 7
 };
 Exer.nest4 = function() {
-  return 11 ;
+  return 11 ;//bar was reassigned to be equal to 11
 };
 Exer.nest5 = function() {
-  return 7 ;
+  return 7 ;//quux is still equal to 7
 };
 Exer.nest6 = function() {
-  return 11;
+  return 11;//bar is still equal to 11
 };
 Exer.nest7 = function() {
-  return 7 ;
+  return 7 ;//quux is still equal to 7
 };
 Exer.nest8 = function() {
-  return 17 ;
+  return 17 ;//foo's value changed to 17
 };
 Exer.nest9 = function() {
-  return 17 ;
+  return 17 ;// bar's value changed to 17
 };
 Exer.nest10 = function() {
-  return 17 ;
+  return 17 ;//quux's value changed to 17
 };
 Exer.nest11 = function() {
-  return 13 ;
+  return 13 ;//quux is now equal to 13
 };
 Exer.nest12 = function() {
-  return 13 ;
+  return 13 ;// quux is still 13
 };
 Exer.nest13 = function() {
-  return 0 ;
+  return 0 ;//foo is now 0
 };
 Exer.nest14 = function() {
-  return 0 ;
+  return 0 ;//bar is now 0
 };
 Exer.nest15 = function() {
-  return 0 ;
+  return 0 ;//quux is now 0
 };
 Exer.nest16 = function() {
-  return 2 ;
+  return 2 ;//foo remained the same
 };
 Exer.nest17 = function() {
-  return 5 ;
+  return 5 ;//bar is the same
 };
 Exer.nest18 = function() {
-  return 0 ;
+  return 0 ;//quux changed to 0
 };
 
 /*******************************************************************************
@@ -289,9 +289,9 @@ Exer.nest18 = function() {
 //=======================================================//
 Exer.values1 = function ( volume, spaceCubeDetector ) {  //
 //=======================================================//
-var volume = spaceCubeDetector;
-volume(1, 1, 1);
-return volume;
+volume = spaceCubeDetector;//assigns volume to be the same as spaceCubeDetector
+volume(1, 1, 1);//tests volume
+return volume;//returns volume to the user
 };  // end Exer.values1
 
 /******************************    Values 2    ********************************/
@@ -301,10 +301,10 @@ return volume;
 //====================================//
 Exer.values2 = function ( volume ) {  //
 //====================================//
-var volume = function (length, height, width) {
-return length*height*width;
+volume = function (length, height, width) {// creates a new function named volume that has length, width and height for the parameters
+return length*height*width;//returns the result of multipling all tree parameters together
 }
-return volume;
+return volume;//returns volume to the user
 
 };  // end Exer.values2
 
@@ -330,7 +330,7 @@ return testNinja;
 /****************************    DECLARATION 2    *****************************/
 // 1. Call a function called `trainNinja` with the argument "punch"
 //    Log what `trainNinja` returns
-// 2. Declare a function called `trainNinja` that takes one parameter called
+// 2. Declare a function named `trainNinja` that takes one parameter called
 //        `move`
 //    `trainNinja` should return the correct string
 //=================================//
@@ -360,11 +360,11 @@ function trainNinja(move){
 Exer.stack1 = function ( jack ) {  //
 //=================================//
 
-jack.push('apple', 'banana', 'chocolate chip');
-var yum = jack.pop();
-jack.push('bacon', 'snozzberries');
-yum += ' ' + jack.pop();
-return yum;
+jack.push('apple', 'banana', 'chocolate chip');//adds the arguments (apple, banana, and chocolate chip) to the 'jack' array (list) at the end in that order
+var yum = jack.pop();// takes off the last item in the array/list and makes it equal to the variable 'yum'
+jack.push('bacon', 'snozzberries');//adds  bacon and snozzberries to the end of the 'jack' array/list
+yum += ' ' + jack.pop();// adds a space to yum, takes off the last item in the 'jack' list and adds it to yum
+return yum;//returns yum, which is now "chocolate chip snozzberries"
 };  // end Exer.stack1
 
 /*******************************    STACK 2    ********************************/
@@ -382,16 +382,17 @@ return yum;
 //=================================//
 Exer.stack2 = function ( jack ) {  //
 //=================================//
-jack.pop();
-jack.pop();
-jack.push('breadfruit');
-console.log(2);
-jack.push('strawberry','durian');
-jack.pop();
-jack.push('durian');
-console.log(jack[jack.length-1]);
-console.log(3);
-return jack;
+jack.pop();//pushes one Pancake
+jack.pop();//pushes another Pancake
+jack.push('breadfruit');//adds breadfruit to the array/list
+console.log(2);//logs the number of pancakes in the list
+jack.push('strawberry','durian');//adds strawberry and durian to the array
+jack.pop();// takes off the last item in the array/list
+jack.push('durian');//adds durian back to the array/list
+console.log(jack[jack.length-1]);//logs the last item in the array, which is 'durian'
+//console.log('durian'); <----- use this one instead
+console.log(3);//logs the length of the array
+return jack;// returns the array
 
 };  // end Exer.stack2
 
@@ -403,16 +404,18 @@ return jack;
 // Create a function that takes two parameters and return it.
 //=================================//
 Exer.optional1 = function() {
-function Optional(option1, option2){
-  return Optional;
-}
+  var optional = function (first, second) {//creates a function that has two Parameters. Change the name of the function and the parameters
+
+  }
+
+return optional;//returns the fuction
 };
 
 /*******************************    Optional 2    *******************************/
 // Call the function value we pass back to you with 4 arguments.
 //=================================//
 Exer.optional2 = function(exercise) {
-  Optional(This, is, an, exercise1);
+  exercise(1, "testing", true, "test");//calls the function with 4 Arguments. Change the Arguments to whatever you want
 };
 
 /*******************************************************************************
@@ -428,32 +431,17 @@ Exer.optional2 = function(exercise) {
 // 5.) Return the new spaceCubeDetector. DONE
 //=================================//
 Exer.closures1 = function(spaceCubeDetector) {
-  /*function SpaceCubeDetector(length, width){// #1
-    return function (height){// #2 and #3
-      if (height == length && height == width){// #4
-        return "SPACE CUBE DETECTED!!";
+  var spaceCubeDetector = function (length, width) {//new version of SpaceCubeDetector that takes a length and a width
+    return function(height) {//returns another function
+      if (height == length && height == width) {// this function, which is the function that SpaceCubeDetector returns, takes a height and
+        return "SPACE CUBE DETECTED!!";// returns the string "SPACE CUBE DETECTED!!" when length, width, and height are the same
       }
-      else{
-        return "THIS IS NO SPACE CUBE!";
-      }
-    }
-  }
-return SpaceCubeDetector(length, width)(height);// #5
-*/
-
-  var SpaceCubeDetector = function (length, width){
-    return function(height){
-      if (height == length && height == width){// #4
-        return "SPACE CUBE DETECTED!!";
-      }
-      else{
-        return "THIS IS NO SPACE CUBE!";
+      else {
+        return "THIS IS NO SPACE CUBE!";// returns the string "THIS IS NO SPACE CUBE!" when they do not
       }
     }
   }
-
-
-
+return spaceCubeDetector;//returns SpaceCubeDetector to the user
 };
 
 /*******************************    Closures 2    *******************************/
@@ -464,8 +452,20 @@ return SpaceCubeDetector(length, width)(height);// #5
 // that takes a height and returns the normal results for spaceCubeDetector.
 // 5.) Return the new spaceCubeDetector.
 //=================================//
-Exer.closures1 = function(spaceCubeDetector) {
-
+Exer.closures2 = function(spaceCubeDetector) {
+function spaceCubeDetector(length){//creates SpaceCubeDetector with length as the parameter
+   return function (width){//returns a function with width as the parameter
+     return function (height){//returns a function with height as the parameter
+       if (height == length && height == width) {// this function, which is the function that SpaceCubeDetector returns, takes a height and
+         return "SPACE CUBE DETECTED!!";// returns the string "SPACE CUBE DETECTED!!" when length, width, and height are the same
+       }
+       else {
+         return "THIS IS NO SPACE CUBE!";// returns the string "THIS IS NO SPACE CUBE!" when they do not
+       }
+     }
+   }
+ }
+ return spaceCubeDetector;//returns spaceCubeDetector to the user
 };
 
 /*******************************************************************************
@@ -475,8 +475,14 @@ Exer.closures1 = function(spaceCubeDetector) {
 /*******************************    Recursion 1    *******************************/
 //
 //=================================//
-Exer.recursion1 = function(code, puzzleBox) {
-  //function contraBeater (code, controller){}
+Exer.recursion1 = function(code, controller) {// NOTE: code is an array/list and controller is function
+  var contraWinningAI = function(code, controller){// creates a function that accepts 'code' and 'controller'
+    controller(code.curr());
+    if (code.next()) {//If there is
+      contraWinningAI(code, controller);//Recursion; the function calls itself and repeats until there is nothing next in the 'code' array
+    }//once there is nothing in the array, the recursion stops
+  };
+  contraWinningAI(code, controller);//calls the function
 };
 
 /*******************************    Recursion 2   *******************************/
@@ -487,7 +493,15 @@ Exer.recursion1 = function(code, puzzleBox) {
 // 3.) Otherwise, call the recursive function again with `puzzleBox` as a
 // parameter then call `puzzleBox.click`'s returned function value.
 //=================================//
-Exer.recursion2 = function(code, puzzleBox) {
+Exer.recursion2 = function(puzzleBox) {
+ var clicking = function (puzzleBox) {//recursive function that clicks the puzzleBox
+   var clickingResult = puzzleBox.click();//catches the amount of clicks
+   if (clickingResult) {// if you can click it more,
+     clicking(puzzleBox);//click the puzzleBox one more time
+     clickingResult();//return the amount of clicks you have done
+   }//if you can't click any more, it'll stop
+ }
+ clicking(puzzleBox);//calls the function
 };
 
 /*******************************************************************************
@@ -500,17 +514,11 @@ Exer.recursion2 = function(code, puzzleBox) {
 //=================================//
 
 Exer.growing1 = function (pigPenSide, chickenPenSide, sheepPenSide) {
-
-  var pigPenSize = pigPenSide * pigPenSide;
-  var pigs = 'pigs';
-  console.log("The " + pigs + " need " + pigPenSize + "sq. ft.");
-  var chickenPenSize = chickenPenSide * chickenPenSide;
-  var chickens = 'chickens';
-  console.log("The " + chickens + " need " + chickenPenSize + "sq. ft.");
-  var sheepPenSize = sheepPenSide * sheepPenSide;
-  var sheeps = 'sheep';
-  console.log("The " + sheeps + " need " + sheepPenSize + "sq. ft.");
-
+  var animals = ["pigs", "chickens", "sheep"];
+  var penSizes = [pigPenSide*pigPenSide, chickenPenSide*chickenPenSide, sheepPenSide*sheepPenSide];
+  for (var i = 0; i < 3; i++) {
+    console.log("The "+ animals[i]+ " need " + penSizes[i] + "sq. ft.");
+  }
 };
 
 /*******************************************************************************
@@ -555,17 +563,17 @@ Exer.sideEffectExample = function() {
 // Make a call to each function in the code example that is a pure function.
 //=================================//
 
-Exer.sideEffect1 = function() {
-  getBarkNoise();
-  pairsOfLegsToTotalLegs(2);
-  hasTail();
+Exer.sideEffect1 = function() {//Pure functions never change anything, they just output stuff. They have no side effects
+  pairsOfLegsToTotalLegs(2);//This is pure since it only returns the argument times 2
+  hasTail();//Always returns 'true'
 };
 
 /*******************************    Side Effects 2  *******************************/
 // Make a call to each function in the code example that is not a pure function.
 //=================================//
 
-Exer.sideEffect2 = function() {
-  setBarkNoise('woof');
+Exer.sideEffect2 = function() {//Non-pure functions have side effects that are changed by arguments
+  setBarkNoise('woof');//the function's argument changes what myBark is
+  getBarkNoise();//Get's bark, which can change, therefore, it is not consistent and pure
   bark('bark', 5);
 };
