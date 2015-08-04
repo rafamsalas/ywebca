@@ -320,7 +320,7 @@ return volume;//returns volume to the user
 //=================================//
 Exer.declaration1 = function () {  //
 //=================================//
-function testNinja(){
+function testNinja() {
   console.log("You gotta believe!");
 }
 return testNinja;
@@ -337,7 +337,7 @@ return testNinja;
 Exer.declaration2 = function () {  //
 //=================================//
 trainNinja("punch");
-function trainNinja(move){
+function trainNinja(move) {
   trainNinja = "Kick, " + move + ", block! It's all in the mind!";
   console.log(trainNinja);
 }
@@ -453,9 +453,9 @@ return spaceCubeDetector;//returns SpaceCubeDetector to the user
 // 5.) Return the new spaceCubeDetector.
 //=================================//
 Exer.closures2 = function(spaceCubeDetector) {
-function spaceCubeDetector(length){//creates SpaceCubeDetector with length as the parameter
-   return function (width){//returns a function with width as the parameter
-     return function (height){//returns a function with height as the parameter
+function spaceCubeDetector(length) {//creates SpaceCubeDetector with length as the parameter
+   return function (width) {//returns a function with width as the parameter
+     return function (height) {//returns a function with height as the parameter
        if (height == length && height == width) {// this function, which is the function that SpaceCubeDetector returns, takes a height and
          return "SPACE CUBE DETECTED!!";// returns the string "SPACE CUBE DETECTED!!" when length, width, and height are the same
        }
@@ -476,7 +476,7 @@ function spaceCubeDetector(length){//creates SpaceCubeDetector with length as th
 //
 //=================================//
 Exer.recursion1 = function(code, controller) {// NOTE: code is an array/list and controller is function
-  var contraWinningAI = function(code, controller){// creates a function that accepts 'code' and 'controller'
+  var contraWinningAI = function(code, controller) {// creates a function that accepts 'code' and 'controller'
     controller(code.curr());
     if (code.next()) {//If there is
       contraWinningAI(code, controller);//Recursion; the function calls itself and repeats until there is nothing next in the 'code' array
